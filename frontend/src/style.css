@@ -9,20 +9,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* App Layout */
-.app {
-  display: flex;
-  height: 100vh;
-}
 
-/* Sidebar Styles */
-.sidebar {
-  width: 250px;
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px;
-  height: 100%;
-}
 
 .sidebar h2 {
   font-size: 24px;
@@ -55,10 +42,7 @@ body {
 }
 
 /* Dashboard Styles */
-.dashboard {
-  flex-grow: 1;
-  padding: 20px;
-}
+
 
 .dashboard h1 {
   font-size: 36px;
@@ -122,4 +106,38 @@ body {
 
 .customer-table th {
   background-color: #f4f4f4;
+}
+/* Ensure app fills the entire screen */
+
+/* Sidebar should not leave extra space */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0; /* Prevents it from resizing */
+}
+
+/* Dashboard should fill remaining space */
+.dashboard {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  justify-content: flex-start;
+  padding: 20px;
+  height: 100vh;
+  width: calc(100vw - 250px); /* Take full width minus sidebar */
+  overflow-y: auto; /* Allows scrolling */
+}
+
+
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw; /* Ensures full width */
+  overflow: hidden; /* Prevents extra white space */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes default padding */
 }

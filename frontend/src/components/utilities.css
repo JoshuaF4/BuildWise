@@ -1,0 +1,114 @@
+.utilities-planner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .population-controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .age-group {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .age-group:hover {
+    transform: translateY(-3px);
+  }
+  
+  .age-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+  
+  .age-group input[type="range"] {
+    width: 100%;
+    margin: 1rem 0;
+    height: 8px;
+    border-radius: 4px;
+    background: #dee2e6;
+    outline: none;
+  }
+  
+  .scroll-note {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+  }
+  
+  .results {
+    margin-top: 2rem;
+  }
+  
+  .total-population {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+  }
+  
+  .utility-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .utility-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .utility-card h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .water h2 { background: #4299e1; }
+  .energy h2 { background: #ecc94b; }
+  .sewage h2 { background: #48bb78; }
+  
+  .value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    color: #2c3e50;
+  }
+  
+  .breakdown p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+  }
+  
+  .recommendation {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  @media (max-width: 768px) {
+    .population-controls {
+      grid-template-columns: 1fr;
+    }
+  }

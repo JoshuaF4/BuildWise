@@ -1,14 +1,13 @@
 .application-container {
   text-align: center;
-  padding: 40px;
-  background-color: #f8fafc; /* Light gray background */
+  padding: 40px; 
 }
 
 /* Grid with 3 items per row */
 .app-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
   max-width: 900px;
   margin: auto;
@@ -16,7 +15,7 @@
 
 /* Application Cards */
 .app-card {
-  background-color: white;
+  background-color: #F5F4FF;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -24,7 +23,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 150px;
+  height: 200px;
+  width:200px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -44,3 +44,8 @@
   font-weight: 600;
   color: #2c3e50;
 }
+.app-image {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+}
+
