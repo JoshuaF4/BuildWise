@@ -28,16 +28,20 @@ BuildWise/
 ### Screenshots
 
 #### Sign Up Page
-![Sign Up Page](screenshots/signup.png)
+<img width="1905" height="889" alt="Screenshot 2025-07-27 165925" src="https://github.com/user-attachments/assets/d13b97eb-ef23-40e9-ad06-342f4b941f53" />
+
 
 #### Dashboard & Navigation
-![Dashboard](screenshots/dashboard.png)
+<img width="1917" height="912" alt="Screenshot 2025-07-27 165938" src="https://github.com/user-attachments/assets/87ab6f8d-97ae-4146-a2b5-669007032289" />
+
 
 #### City Utilities Planner
-![City Utilities Planner](screenshots/utilities_planner.png)
+<img width="1535" height="909" alt="Screenshot 2025-07-27 165957" src="https://github.com/user-attachments/assets/bf864d96-96ad-47eb-abea-3935b61b7ad5" />
+
 
 #### Projects Management
-![Projects Management](screenshots/projects.png)
+<img width="1909" height="896" alt="Screenshot 2025-07-27 170040" src="https://github.com/user-attachments/assets/e882cac4-23be-4874-982d-24385a02d585" />
+
 
 ### Setup Instructions
 
