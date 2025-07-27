@@ -1,25 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-function LeadsTable() {
-  const [leads, setLeads] = useState([]);  
-  const [showForm, setShowForm] = useState(false);  
-  const [newLead, setNewLead] = useState({ name: '', company: '', email: '', phone: '' });
+function LeadsTable({ leads: initialLeads, createLead }) {
+  const [leads, setLeads] = useState(initialLeads || []);
+  const [showForm, setShowForm] = useState(false);
+  const [newLead, setNewLead] = useState({ name: '', email: '', phone: '', status: 'New' });
+
+  useEffect(() => {
+    setLeads(initialLeads || []);
+  }, [initialLeads]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setNewLead({ ...newLead, [name]: value });
   };
 
-  const handleAddLead = () => {
-    if (!newLead.name || !newLead.email) {
-      alert('Name and Email are required!');
+  const handleAddLead = async () => {
+    if (!newLead.name || !newLead.email || !newLead.phone) {
+      alert('Name, Email and Phone are required!');
       return;
     }
 
-    const newEntry = { id: leads.length + 1, ...newLead };
-    setLeads([...leads, newEntry]); 
-    setNewLead({ name: '', company: '', email: '', phone: '' });
-    setShowForm(false); 
+    try {
+      // Call the createLead prop function to make the POST request
+      await createLead(newLead);  // Await the promise
+
+      // Clear the form and close it
+      setNewLead({ name: '', email: '', phone: '', status: 'New' });
+      setShowForm(false);
+    } catch (error) {
+      console.error("Error creating lead:", error);
+      alert("Failed to create lead. See console for details.");  // User-friendly error
+    }
   };
 
   return (
@@ -31,11 +42,30 @@ function LeadsTable() {
 
       {showForm && (
         <div className="customer-form">
-          <input type="text" name="name" placeholder="Name" value={newLead.name} onChange={handleInputChange} />
-          <input type="text" name="company" placeholder="Company" value={newLead.company} onChange={handleInputChange} />
-          <input type="email" name="email" placeholder="Email" value={newLead.email} onChange={handleInputChange} />
-          <input type="text" name="phone" placeholder="Phone" value={newLead.phone} onChange={handleInputChange} />
-          <button onClick={handleAddLead} className="save-btn">Add</button>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={newLead.name}
+            onChange={handleInputChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={newLead.email}
+            onChange={handleInputChange}
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone"
+            value={newLead.phone}
+            onChange={handleInputChange}
+          />
+          <button onClick={handleAddLead} className="save-btn">
+            Add
+          </button>
         </div>
       )}
 
@@ -43,18 +73,18 @@ function LeadsTable() {
         <thead>
           <tr>
             <th>Name</th>
-            <th>Company</th>
             <th>Email</th>
             <th>Mobile</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
           {leads.map((lead) => (
             <tr key={lead.id}>
               <td>{lead.name}</td>
-              <td>{lead.company}</td>
               <td>{lead.email}</td>
               <td>{lead.phone}</td>
+              <td>{lead.status}</td>
             </tr>
           ))}
         </tbody>
