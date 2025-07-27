@@ -25,6 +25,20 @@ BuildWise/
   - Authentication (Sign In/Sign Up)
   - Utility components and custom styles
 
+### Screenshots
+
+#### Sign Up Page
+![Sign Up Page](screenshots/signup.png)
+
+#### Dashboard & Navigation
+![Dashboard](screenshots/dashboard.png)
+
+#### City Utilities Planner
+![City Utilities Planner](screenshots/utilities_planner.png)
+
+#### Projects Management
+![Projects Management](screenshots/projects.png)
+
 ### Setup Instructions
 
 1. **Install dependencies:**
@@ -68,4 +82,4 @@ See `frontend/README.md` for more details on available scripts and advanced conf
 
 ## License
 
-This project is licensed under the ISC License.
+This project is licensed under the ISC License. 

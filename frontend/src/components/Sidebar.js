@@ -26,5 +26,4 @@ const Sidebar = ({ setSelectedItem }) => {
     </div>
   );
 };
-
 export default Sidebar;
