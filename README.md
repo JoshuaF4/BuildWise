@@ -76,6 +76,9 @@ See `frontend/README.md` for more details on available scripts and advanced conf
 - Uses libraries like Flask, PyTorch, segmentation-models-pytorch, Gradio, OpenCV, and more.
 - To run the notebook, ensure you have the required Python packages installed (see the first cell in the notebook for a list).
 
+  ![WhatsApp Image 2025-02-07 at 00 16 55_8f6fe133](https://github.com/user-attachments/assets/14ce2f32-5a0d-4c12-861f-23e1cc4217cf)
+
+
 ## Contributing
 
 1. Fork the repository
